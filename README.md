@@ -31,3 +31,21 @@ The following tools are installed
 ```bash
       SUPABASE_ACCESS_TOKEN=xxx supabase functions deploy <func_name> --project-ref <project_ref_id>
 ```
+
+## Create database migrations
+
+- Create/Update database table in the table editor
+- Generate migration
+  ```bash
+      supabase db diff --use-migra -f <output_migration_file_name>
+  ```
+- To verify that the new migration does not generate errors.
+  ```bash
+    supabase db reset
+  ```
+
+## Run database migrations and seed database
+
+```bash
+      supabase db reset
+```
